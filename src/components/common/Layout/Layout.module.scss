@@ -1,0 +1,64 @@
+.root {
+  &_header {
+    &_top {
+      height: 120px;
+      width: 100dvw;
+      background-color: #1c1c1c;
+    }
+
+    &_nav {
+      height: 56px;
+      width: 100dvw;
+      background-color: #383838;
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0 100px;
+
+        .active {
+          background-color: #c71213;
+        }
+
+        li {
+          color: white;
+          padding: 18px 20px;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Active state */
+        li.active {
+          background-color: #c71213;
+        }
+
+        /* Hover effect for non-active items */
+        li:not(.active)::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background-color: #c71213;
+          transition: width 0.2s ease-in-out;
+          z-index: -1;
+        }
+
+        /* Expand background on hover */
+        li:not(.active):hover::before {
+          width: 100%;
+        }
+
+        /* Ensure text stays visible */
+        li:not(.active) {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

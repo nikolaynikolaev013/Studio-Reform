@@ -1,0 +1,48 @@
+@import "/src/common/styles/globalStyles.scss";
+
+.tabs {
+  height: auto;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.013);
+  backdrop-filter: blur(10px);
+  align-self: center;
+  margin-bottom: 30px;
+
+  &_button {
+    cursor: pointer;
+    width: 100%;
+    border: 0.5px solid $colorBorderLight;
+    padding: 2px 15px;
+    transition: background-color 200ms ease-in-out,
+      border-color 200ms ease-in-out;
+
+    &:first-child {
+      border-radius: 50px 0 0 50px;
+    }
+
+    &:last-child {
+      border-radius: 0 50px 50px 0;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(157, 154, 154, 0.117);
+    }
+
+    &_active {
+      background-color: rgba(255, 255, 255, 0.371);
+      border-color: $colorBorderLight;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.371);
+      border-color: rgba(255, 255, 255, 0.013);
+    }
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}

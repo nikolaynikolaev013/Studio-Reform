@@ -1,0 +1,28 @@
+@import "/src/common/styles/globalStyles.scss";
+
+.button {
+  padding: 8px 20px;
+  border: 1px solid $colorBorder;
+  background-color: transparent;
+  color: $colorText;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-family: "Mont";
+  cursor: pointer;
+  @include hover-lift;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: rgba(167, 141, 111, 0.1);
+    border-color: $colorText;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

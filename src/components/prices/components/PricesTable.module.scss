@@ -1,0 +1,52 @@
+.prices {
+  padding: 30px;
+  width: 90%;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 1px;
+      background-color: #c0a98e;
+    }
+  }
+
+  &_section {
+    display: block;
+    margin-top: 30px;
+
+    &_title {
+      font-size: 1.25rem;
+      width: 100%;
+      display: block;
+      text-align: left;
+      padding: 20px 15px;
+    }
+  }
+
+  &_container {
+    width: 100%;
+  }
+
+  &_table {
+    &_row {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 25px;
+      border-bottom: 1px solid rgba(167, 141, 111, 0.3);
+      font-size: 16px;
+      font-weight: 100;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "/src/common/styles/globalStyles.scss";
+
+.badge {
+  background-color: #ecdac9;
+  color: $colorText;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}

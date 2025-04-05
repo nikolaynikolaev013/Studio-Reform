@@ -1,0 +1,19 @@
+.card {
+  border-radius: 30px;
+  background-color: #fffbf5;
+  width: 450px;
+
+  h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+
+  &_content {
+    padding: 20px;
+
+    span {
+      font-size: 0.8758rem;
+    }
+  }
+}

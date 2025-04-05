@@ -1,0 +1,47 @@
+@import "/src/common/styles/globalStyles.scss";
+
+.inputGroup {
+  position: relative;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 10px;
+
+  textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid $colorBorder;
+    color: rgb(89, 75, 59);
+    border-radius: 10px;
+    font-family: "Mont";
+    font-size: 1rem;
+    padding: 10px 15px;
+    resize: vertical;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      top: -0.8rem;
+      font-size: 0.75rem;
+      color: rgba(167, 141, 111, 0.3);
+    }
+  }
+
+  textarea:placeholder-shown + label {
+    top: 0.75rem;
+  }
+
+  label {
+    position: absolute;
+    left: 15px;
+    top: 0.75rem;
+    font-size: 1rem;
+    color: rgba(167, 141, 111, 0.5);
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background-color: transparent;
+  }
+}

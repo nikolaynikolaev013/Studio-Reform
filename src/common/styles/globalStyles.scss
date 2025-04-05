@@ -1,0 +1,20 @@
+// Colors
+
+$colorText: #323232;
+$colorTextGray: #ccc;
+$colorBorder: rgba(167, 141, 111, 0.797);
+$colorBorderLight: rgba(204, 185, 164, 0.797);
+$colorTextInvalid: #ff0000;
+
+$colorImagePlaceholder: #dec29b;
+
+$colorBackground: #eee4db;
+
+// Transitions
+@mixin hover-lift($distance: -5px, $duration: 0.3s) {
+  transition: transform $duration;
+
+  &:hover {
+    transform: translateY($distance);
+  }
+}

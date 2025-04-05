@@ -1,0 +1,43 @@
+@import "/src/common/styles/globalStyles.scss";
+
+.testemonial {
+  position: relative;
+  width: 300px;
+  //   height: 260px;
+  background-color: #faecd6;
+  border-radius: 30px;
+  overflow: hidden;
+  color: $colorText;
+  gap: 20px;
+  padding: 70px 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  h3 {
+    margin: 0;
+    font-weight: 200;
+  }
+
+  &:before {
+    content: "“";
+    font-size: 100px;
+    color: $colorTextGray;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    line-height: 1;
+  }
+
+  &_user {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+
+    &_names {
+      font-size: 0.875rem;
+      color: $colorText;
+    }
+  }
+}

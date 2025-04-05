@@ -1,0 +1,8 @@
+@import "/src/common/styles/globalStyles.scss";
+
+.studios {
+  position: relative;
+  z-index: 15;
+  background-color: $colorBackground;
+  padding: 30px;
+}
