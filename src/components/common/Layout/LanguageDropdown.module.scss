@@ -1,0 +1,88 @@
+// https://nucleoapp.com/svg-flag-icons
+
+.lang_dropdown {
+  position: fixed;
+  right: 3px;
+  top: 0;
+  display: inline-block;
+  cursor: pointer;
+
+  &_btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: #ebe0cc;
+    border: none;
+    padding: 8px 25px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: #333;
+    border-radius: 20px 50px 0px 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #e5d9c3;
+    }
+
+    &_arrow {
+      margin-left: 8px;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #333 transparent transparent transparent;
+      transition: transform 0.3s ease;
+
+      &_show {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_panel {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &_show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    &_option {
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+      gap: 7px;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}

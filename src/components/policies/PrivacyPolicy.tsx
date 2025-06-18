@@ -1,10 +1,18 @@
 import { untranslated } from "../common/infrastructure/utilities/untranslsated";
 import { PageTitle } from "../common/PageTitle";
+import { Seo } from "../common/Seo";
 import styles from "./Policy.module.scss";
 
 export const PrivacyPolicy = () => {
   return (
     <div className={styles.policy}>
+      <Seo
+        title={"Политика за поверителност"}
+        description={
+          "Прочети нашата политика за поверителност – как събираме, използваме и съхраняваме личната ти информация в Studio Reform."
+        }
+      />
+
       <PageTitle text={"Политика за поверителност"} />
 
       <div className={styles.policy_wrapper}>

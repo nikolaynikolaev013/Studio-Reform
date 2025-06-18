@@ -11,6 +11,9 @@ import { TeamIcon } from "./baseIcons/TeamIcon";
 import { ClockIcon } from "./baseIcons/ClockIcon";
 import { MapIcon } from "./baseIcons/MapIcon";
 import { LocationIcon } from "./baseIcons/LocationIcon";
+import { BulgariaFlagIcon } from "./baseIcons/BulgariaFlagIcon";
+import { UKFlagIcon } from "./baseIcons/UKFlagIcon";
+import { BurgerMenuIcon } from "./baseIcons/BurgerMenuIcon";
 
 export enum IconType {
   ReformPilatesLogo = "ReformPilatesLogo",
@@ -23,6 +26,9 @@ export enum IconType {
   Clock = "Clock",
   Map = "Map",
   Locaton = "Locaton",
+  BulgariaFlag = "BulgariaFlag",
+  UkFlag = "UkFlag",
+  BurgerMenu = "BurgerMenu",
 }
 
 export interface IBaseIconProps {
@@ -43,9 +49,9 @@ export const Icon = ({
   type,
   height,
   width,
-  color,
-  backgroundColor,
-}: IIconProps) => {
+}: // color,
+// backgroundColor,
+IIconProps) => {
   const baseIcons: { [key in IconType]: JSX.Element } = {
     [IconType.ReformPilatesLogo]: <ReformPilatesLogo />,
     [IconType.PilatesModels]: <PilatesModles />,
@@ -57,6 +63,9 @@ export const Icon = ({
     [IconType.Clock]: <ClockIcon />,
     [IconType.Map]: <MapIcon />,
     [IconType.Locaton]: <LocationIcon />,
+    [IconType.BulgariaFlag]: <BulgariaFlagIcon />,
+    [IconType.UkFlag]: <UKFlagIcon />,
+    [IconType.BurgerMenu]: <BurgerMenuIcon />,
   };
 
   return (

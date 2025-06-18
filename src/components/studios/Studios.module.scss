@@ -4,5 +4,35 @@
   position: relative;
   z-index: 15;
   background-color: $colorBackground;
-  padding: 30px;
+  padding-top: 30px;
+}
+
+.sofia {
+  @include image("/images/studio-reform-studios-sofia-2.JPG");
+
+  background-position: center 60%;
+  &::after {
+    @include soft-overlay();
+    border-radius: 30px 30px 0 0;
+  }
+}
+
+.varna_center {
+  @include image("/images/studio-reform-studios-varna-center.JPG");
+
+  background-position: center 60%;
+  &::after {
+    @include soft-overlay();
+    border-radius: 30px 30px 0 0;
+  }
+}
+
+.varna_levski {
+  @include image("/images/studio-reform-studios-varna-levski.JPG");
+
+  background-position: center 60%;
+  &::after {
+    @include soft-overlay();
+    border-radius: 30px 30px 0 0;
+  }
 }

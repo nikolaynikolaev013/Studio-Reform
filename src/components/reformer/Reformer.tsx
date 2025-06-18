@@ -1,10 +1,19 @@
 import { untranslated } from "../common/infrastructure/utilities/untranslsated";
+import { Seo } from "../common/Seo";
 import { Card } from "./components/Card";
 import styles from "./Reformer.module.scss";
+import "swiper/swiper-bundle.css";
 
 export const Reformer = () => {
   return (
     <div className={styles.reformer}>
+      <Seo
+        title={"🤸🏻‍♂️ Реформър"}
+        description={
+          "Научи всичко за реформър пилатес тренировките в Studio Reform. Персонализирани класове с опитни инструктори за начинаещи и напреднали."
+        }
+      />
+
       <div className={styles.reformer_heading}>
         <h1>Пилатес Реформър</h1>
       </div>
@@ -47,7 +56,9 @@ export const Reformer = () => {
         />
       </div>
 
-      <h1>{untranslated("Защо REFORM Pilates Studio?")}</h1>
+      <h1 className={styles.why_reform_heading}>
+        {untranslated("Защо REFORM Pilates Studio?")}
+      </h1>
 
       <div className={styles.why_reform}>
         <div className={styles.why_reform_left}></div>

@@ -11,15 +11,34 @@
   justify-content: center;
   padding-bottom: 80px;
 
+  @include mobile {
+    padding-bottom: 30px;
+  }
+
   &_heading {
-    background-color: #9e7453;
-    color: #fffbf5;
+    @include image("/images/reformer-pilates-studio-reform-1.png");
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fff;
     height: 350px;
     width: 100%;
     border-radius: 30px 30px 0 0;
+    overflow: hidden; // make sure ::after doesn't spill out
+
+    &::after {
+      @include soft-overlay();
+      border-radius: 30px 30px 0 0;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 2;
+    }
+
+    @include mobile {
+      height: 250px;
+    }
   }
 
   &_subheading {
@@ -29,34 +48,73 @@
     padding: 20px 40px 50px;
     width: 100%;
     max-width: 1000px;
+
+    @include mobile {
+      padding: 20px 20px 50px;
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
   }
 
   &_cards {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
     gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   h1 {
     margin-top: 150px;
     width: 86%;
     text-align: left;
+
+    @include mobile {
+      margin-top: 0;
+      font-size: 2.4em;
+    }
+
+    @include tablet {
+      margin-top: 70px;
+    }
   }
 }
 
 .why_reform {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1000px;
   width: 100%;
+
+  @include mobile {
+    justify-content: center;
+
+    &_heading {
+      font-size: 2rem !important;
+      margin-top: 50px !important;
+    }
+  }
+
+  @include tablet {
+    padding: 0 20px;
+    gap: 24px;
+  }
 
   &_left {
     width: 270px;
     height: 460px;
-    background-color: $colorImagePlaceholder;
     border-radius: 20px;
+
+    @include image("/images/studio-reform-why-reformer.JPG");
+
+    &::after {
+      @include soft-overlay();
+      border-radius: 20px;
+    }
   }
 
   &_right {
@@ -78,6 +136,18 @@
       border-radius: 20px;
       display: block;
       width: 120%;
+    }
+
+    @include tablet {
+      font-size: 0.85rem;
+
+      span:nth-child(2) {
+        font-size: 1rem;
+        background-color: #fffbf5;
+        border-radius: 20px;
+        display: block;
+        width: 120%;
+      }
     }
   }
 }

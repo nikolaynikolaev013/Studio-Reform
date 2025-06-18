@@ -1,3 +1,5 @@
+@import "/src/common/styles/globalStyles.scss";
+
 #root {
   text-align: center;
   width: 100%;
@@ -28,8 +30,17 @@
   font-family: "Garett", "Mont", sans-serif;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--app-font);
+}
+
+.CookieConsent {
+  justify-content: center !important;
 }
 
 .logo {

@@ -1,10 +1,18 @@
 import { untranslated } from "../common/infrastructure/utilities/untranslsated";
 import { PageTitle } from "../common/PageTitle";
+import { Seo } from "../common/Seo";
 import styles from "./Policy.module.scss";
 
 export const TermsOfUse = () => {
   return (
     <div className={styles.policy}>
+      <Seo
+        title={"Условия за ползване"}
+        description={
+          "Разгледай условията за ползване на уебсайта на Studio Reform. Научи какви са твоите права и отговорности."
+        }
+      />
+
       <PageTitle
         text={untranslated(
           "Общи условия за ползване на уебсайта www.studioreform.bg"

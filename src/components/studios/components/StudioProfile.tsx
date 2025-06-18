@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styles from "./StudioProfile.module.scss";
 import { Icon, IconType } from "../../common/icons/Icon";
 import { MapCard } from "../../common/MapCard";
+import { Seo } from "../../common/Seo";
+import { classNames } from "primereact/utils";
 
 export interface IStudioViewModel {
   studioName: string;
@@ -9,6 +11,7 @@ export interface IStudioViewModel {
   phoneNumbers: IStudioPhoneViewModel[];
   address: string;
   googleMapsLink: string;
+  metaDescription: string;
   lat: number;
   lng: number;
 }
@@ -20,11 +23,17 @@ interface IStudioPhoneViewModel {
 
 interface IStudioProfileProps {
   studio: IStudioViewModel;
+  imageClassName?: string;
 }
 
-export const StudioProfile = ({ studio }: IStudioProfileProps) => {
+export const StudioProfile = ({
+  studio,
+  imageClassName,
+}: IStudioProfileProps) => {
   return (
     <div className={styles.studio}>
+      <Seo title={"Нашите студиа"} description={studio.metaDescription} />
+
       <div className={styles.studio_wrapper}>
         <div className={styles.studio_left}>
           <h2>{studio.studioName}</h2>
@@ -39,6 +48,7 @@ export const StudioProfile = ({ studio }: IStudioProfileProps) => {
                 key={phone.phone}
                 to={phone.phoneLink}
                 className={styles.studio_left_links_link}
+                area-label={`Call ${studio.studioName} at ${phone.phone}`}
               >
                 <Icon type={IconType.Phone} width={"20px"} /> {phone.phone}
               </Link>
@@ -51,12 +61,13 @@ export const StudioProfile = ({ studio }: IStudioProfileProps) => {
             <Link
               to={studio.googleMapsLink}
               className={styles.studio_left_links_link}
+              area-label={`Open ${studio.studioName} in Google Maps`}
             >
               <Icon type={IconType.Map} width={"20px"} /> Отвори в Google Maps
             </Link>
           </div>
         </div>
-        <div className={styles.studio_right}></div>
+        <div className={classNames(styles.studio_image, imageClassName)}></div>
       </div>
       <div className={styles.studio_footer_container}>
         <div className={styles.studio_footer}>

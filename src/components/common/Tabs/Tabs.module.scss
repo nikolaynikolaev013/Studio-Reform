@@ -3,31 +3,41 @@
 .tabs {
   height: auto;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.013);
   backdrop-filter: blur(10px);
   align-self: center;
   margin-bottom: 30px;
 
+  @include mobile {
+    gap: 10px;
+  }
+
   &_button {
     cursor: pointer;
-    width: 100%;
     border: 0.5px solid $colorBorderLight;
     padding: 2px 15px;
     transition: background-color 200ms ease-in-out,
       border-color 200ms ease-in-out;
 
-    &:first-child {
-      border-radius: 50px 0 0 50px;
+    @include mobile {
+      border-radius: 20px;
     }
 
-    &:last-child {
-      border-radius: 0 50px 50px 0;
-    }
+    @include small-tablet-and-bigger {
+      &:first-child {
+        border-radius: 50px 0 0 50px;
+      }
 
-    &:not(:last-child) {
-      border-right: 1px solid rgba(157, 154, 154, 0.117);
-    }
+      &:last-child {
+        border-radius: 0 50px 50px 0;
+      }
 
+      &:not(:last-child) {
+        border-right: 1px solid rgba(157, 154, 154, 0.117);
+      }
+    }
     &_active {
       background-color: rgba(255, 255, 255, 0.371);
       border-color: $colorBorderLight;

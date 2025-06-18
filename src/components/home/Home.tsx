@@ -6,13 +6,19 @@ import { Card } from "./components/Card";
 import styles from "./Home.module.scss";
 import { routePaths } from "../common/infrastructure/routes/routePaths";
 import { TestemonialCard } from "./components/TestemonialCard";
+import { Seo } from "../common/Seo";
 
 export const Home = () => {
   const navigate = useNavigate();
 
   return (
     <div className={styles.wrapper}>
-      {/* <div>Hero comes here</div> */}
+      <Seo
+        title={"Начална страница"}
+        description={
+          "Студио Реформ предлага професионални реформър пилатес класове в София и Варна. Подобри силата, гъвкавостта и стойката си с нас!"
+        }
+      />
       <div className={styles.pilates_info}>
         <h1>
           {untranslated(
@@ -49,6 +55,7 @@ export const Home = () => {
           </h2>
           <div className={styles.pilates_reformer_cards}>
             <Card
+              imageClass={styles.pilates_reformer_cards_card1}
               firstText={untranslated(
                 "По-бързи резултати – благодарение на съпротивлението от пружините, тялото работи по-активно и изгаря повече калории."
               )}
@@ -57,6 +64,7 @@ export const Home = () => {
               )}
             />
             <Card
+              imageClass={styles.pilates_reformer_cards_card2}
               firstText={untranslated(
                 "Облекчава напрежение в ставите – реформърът позволява плавни, контролирани движения, които щадят коленете, гърба и врата."
               )}
@@ -65,6 +73,7 @@ export const Home = () => {
               )}
             />
             <Card
+              imageClass={styles.pilates_reformer_cards_card3}
               firstText={untranslated(
                 "Подходящ и за възстановяване – често се използва от физиотерапевти при рехабилитация и след травми."
               )}

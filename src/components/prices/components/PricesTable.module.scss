@@ -1,3 +1,5 @@
+@import "/src/common/styles/globalStyles.scss";
+
 .prices {
   padding: 30px;
   width: 90%;
@@ -9,6 +11,10 @@
     text-align: center;
     margin-bottom: 50px;
     position: relative;
+
+    @include mobile {
+      font-size: 20px;
+    }
 
     &:after {
       content: "";
@@ -32,6 +38,10 @@
       display: block;
       text-align: left;
       padding: 20px 15px;
+
+      @include mobile {
+        font-size: 1.1rem;
+      }
     }
   }
 
@@ -43,10 +53,19 @@
     &_row {
       display: flex;
       justify-content: space-between;
+      gap: 30px;
       padding: 20px 25px;
       border-bottom: 1px solid rgba(167, 141, 111, 0.3);
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 100;
+
+      div:first-child {
+        text-align: left;
+      }
+
+      @include mobile {
+        font-size: 0.85rem;
+      }
     }
   }
 }

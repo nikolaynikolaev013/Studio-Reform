@@ -6,6 +6,7 @@
   text-align: left;
   max-width: 1300px;
   width: 100%;
+  padding: 0 20px;
 
   li {
     margin: 5px 0;
@@ -36,6 +37,7 @@
 
   &_values {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
   }
 }

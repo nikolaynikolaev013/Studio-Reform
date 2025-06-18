@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { Layout2 } from "./components/common/Layout/Layout2";
+import { Layout } from "./components/common/Layout/Layout";
 import {
   IRoute,
   routesMetadata,
@@ -9,14 +9,16 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import CookieConsent from "react-cookie-consent";
 import { untranslated } from "./components/common/infrastructure/utilities/untranslsated";
 import { useApp } from "./App.hooks";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const routes: IRoute[] = routesMetadata;
   const { loadTracking } = useApp();
   return (
-    <Layout2>
+    <Layout>
       <>
         <ScrollToTop />
+        <Toaster position="top-center" reverseOrder={false} />
         <CookieConsent
           location="bottom"
           buttonText="Съгласен съм"
@@ -39,7 +41,7 @@ function App() {
           ))}
         </Routes>
       </>
-    </Layout2>
+    </Layout>
   );
 }
 

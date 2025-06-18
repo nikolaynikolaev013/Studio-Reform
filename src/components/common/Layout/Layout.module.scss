@@ -1,64 +1,263 @@
-.root {
-  &_header {
-    &_top {
-      height: 120px;
-      width: 100dvw;
-      background-color: #1c1c1c;
+@import "/src/common/styles/globalStyles.scss";
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #d8c0a8, #e6d2b5, #d6c2a6);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: relative;
+}
+
+.sphere {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.sphere1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(243, 229, 210, 0.8) 25%,
+    rgba(226, 204, 172, 0.6) 50%,
+    rgba(198, 171, 136, 0.4) 75%
+  );
+  top: 100px;
+  right: 100px;
+  animation: float3D 16s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+.sphere2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle at 70% 70%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(240, 223, 197, 0.8) 20%,
+    rgba(218, 195, 160, 0.6) 40%,
+    rgba(192, 164, 128, 0.4) 60%
+  );
+  bottom: 150px;
+  left: 150px;
+  animation: float3D 20s ease-in-out infinite reverse;
+  opacity: 0.85;
+}
+
+.sphere3 {
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(235, 217, 194, 0.8) 20%,
+    rgba(213, 189, 158, 0.6) 40%,
+    rgba(186, 159, 123, 0.4) 60%
+  );
+  top: 21%;
+  right: 50%;
+  animation: float3D 17.6s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.sphere4 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(
+    circle at 60% 30%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(248, 235, 218, 0.8) 25%,
+    rgba(229, 211, 183, 0.6) 50%,
+    rgba(204, 181, 148, 0.4) 75%
+  );
+  top: 50px;
+  left: 10%;
+  animation: float3D 14.4s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float3D {
+  0% {
+    transform: translateY(0) translateZ(0) rotateZ(0deg);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: translateY(-40px) translateZ(50px) rotateZ(5deg);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    transform: translateY(0) translateZ(0) rotateZ(0deg);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &_navigation {
+    &_sticky {
+      background-color: rgba(239, 237, 237, 0.9) !important;
     }
+  }
 
-    &_nav {
-      height: 56px;
-      width: 100dvw;
-      background-color: #383838;
+  &_header {
+    margin: 20px;
+    width: 90dvw;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-      nav ul {
-        list-style-type: none;
-        display: flex;
-        margin: 0;
-        padding: 0 100px;
+    &_top {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 10px;
 
-        .active {
-          background-color: #c71213;
-        }
-
-        li {
-          color: white;
-          padding: 18px 20px;
-          cursor: pointer;
-          position: relative;
-          overflow: hidden;
-          transition: background-color 0.3s ease-in-out;
-        }
-
-        /* Active state */
-        li.active {
-          background-color: #c71213;
-        }
-
-        /* Hover effect for non-active items */
-        li:not(.active)::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 0;
-          height: 100%;
-          background-color: #c71213;
-          transition: width 0.2s ease-in-out;
-          z-index: -1;
-        }
-
-        /* Expand background on hover */
-        li:not(.active):hover::before {
-          width: 100%;
-        }
-
-        /* Ensure text stays visible */
-        li:not(.active) {
-          position: relative;
-          z-index: 1;
+      &_languages {
+        @include mobile {
+          display: none !important;
         }
       }
+
+      @include small-tablet {
+        padding: 20px;
+      }
+
+      &_addresses {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include small-tablet {
+          display: none;
+        }
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          width: 70%;
+
+          @include tablet {
+            width: 90%;
+          }
+
+          li {
+            font-size: 0.9rem;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 5px 0;
+            cursor: pointer;
+            font-weight: 100;
+            color: rgb(35, 35, 35);
+            height: fit-content;
+
+            @include tablet {
+              font-size: 0.65rem;
+            }
+
+            span {
+              font-weight: 400;
+              color: black;
+            }
+
+            a {
+              padding: 5px 15px;
+              text-decoration: none;
+              color: $colorText;
+            }
+          }
+
+          li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  padding: 60px 60px 20px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    padding: 30px 60px 20px;
+  }
+
+  &_left {
+    &_socials {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+
+      a:last-child {
+        margin-left: 7px;
+      }
+
+      @include mobile {
+        width: 50%;
+      }
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        width: 70% !important;
+        height: 50% !important;
+      }
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    a {
+      color: black;
+      padding: 0 10px;
+      font-size: 0.875rem;
+      line-height: 1rem;
+      text-decoration: none;
     }
   }
 }

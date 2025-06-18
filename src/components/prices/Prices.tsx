@@ -3,6 +3,7 @@ import styles from "./Prices.module.scss";
 import { PricesTable } from "./components/PricesTable";
 import { PageTitle } from "../common/PageTitle";
 import { ITabData, Tabs } from "../common/Tabs/Tabs";
+import { Seo } from "../common/Seo";
 
 type cities = "sofia" | "varna";
 
@@ -114,6 +115,13 @@ export const Prices = () => {
 
   return (
     <div className={styles.panel}>
+      <Seo
+        title={"Цени"}
+        description={
+          "Виж цените за пилатес тренировките в Studio Reform. Избери индивидуални или групови тренировки, или абонаментни планове, съобразени с твоите нужди."
+        }
+      />
+
       <div className={styles.prices}>
         <PageTitle text={untranslated("Нашите цени")} />
 

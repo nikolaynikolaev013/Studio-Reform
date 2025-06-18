@@ -17,17 +17,32 @@ export const Studios = () => {
     {
       label: "София - център",
       key: "sofia-center",
-      children: <StudioProfile studio={studioSofiaCenter} />,
+      children: (
+        <StudioProfile
+          studio={studioSofiaCenter}
+          imageClassName={styles.sofia}
+        />
+      ),
     },
     {
       label: "Варна - център",
       key: "varna-center",
-      children: <StudioProfile studio={studioVarnaCenter} />,
+      children: (
+        <StudioProfile
+          studio={studioVarnaCenter}
+          imageClassName={styles.varna_center}
+        />
+      ),
     },
     {
       label: "Варна - Левски",
       key: "varna-levski",
-      children: <StudioProfile studio={studioVarnaLevski} />,
+      children: (
+        <StudioProfile
+          studio={studioVarnaLevski}
+          imageClassName={styles.varna_levski}
+        />
+      ),
     },
   ];
 
@@ -50,7 +65,7 @@ export const Studios = () => {
             ? (studio as StudiosType)
             : "sofia-center"
         }
-        buttonWidth={250}
+        buttonWidth={165}
         onTabChange={onTabChange}
       />
     </div>

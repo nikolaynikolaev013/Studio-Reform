@@ -18,3 +18,60 @@ $colorBackground: #eee4db;
     transform: translateY($distance);
   }
 }
+
+$breakpoint-mobile: 576px;
+$breakpoint-small-tablet: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Mobile only
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+// Small tablet only
+@mixin small-tablet {
+  @media (max-width: #{$breakpoint-small-tablet}) {
+    @content;
+  }
+}
+
+// Small tablet only
+@mixin small-tablet-and-bigger {
+  @media (min-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+// Tablet only
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+// Desktop and down
+@mixin desktop {
+  @media (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin soft-overlay($color: #dec29b, $opacity: 0.4) {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: $color;
+  opacity: $opacity;
+  z-index: 1;
+}
+
+@mixin image($imageHref) {
+  position: relative;
+  background-image: url($imageHref);
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+}

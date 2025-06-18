@@ -19,7 +19,7 @@ export const routesMetadata: IRoute[] = [
   {
     name: "home",
     path: routePaths.home,
-    element: <Home></Home>,
+    element: <Home />,
   },
   {
     name: "reformer",

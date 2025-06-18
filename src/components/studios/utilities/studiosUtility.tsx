@@ -15,6 +15,8 @@ export const studioSofiaCenter: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/76sjF14ttUPuk6CY6",
   lat: 42.7011482,
   lng: 23.3214208,
+  metaDescription:
+    "Реформър пилатес студио в центъра на София – модерно оборудване, уютна обстановка и сертифицирани треньори.",
 };
 
 export const studioVarnaLevski: IStudioViewModel = {
@@ -35,6 +37,8 @@ export const studioVarnaLevski: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/whkdPmhyXQ2G5u5N6",
   lat: 43.2205151,
   lng: 27.9334835,
+  metaDescription:
+    "Пилатес студио Studio Reform в квартал Левски, Варна. Тренировки, съобразени с твоето ниво и цели. Запиши се още днес!",
 };
 
 export const studioVarnaCenter: IStudioViewModel = {
@@ -51,4 +55,5 @@ export const studioVarnaCenter: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/b9BuCJ5NQX6Ge5NP6",
   lat: 43.2029828,
   lng: 27.9033711,
+  metaDescription: "Studio Reform Варна Център – първокласно пилатес студио с фокус върху индивидуалния подход и професионалната грижа.",
 };

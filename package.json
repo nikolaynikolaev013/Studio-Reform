@@ -7,20 +7,25 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sitemap": "node generate-sitemap.cjs"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
-    "primereact": "^10.9.3",
+    "primereact": "^10.9.4",
     "react": "^19.0.0",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^19.0.0",
+    "react-head": "^3.4.2",
     "react-hook-form": "^7.55.0",
+    "react-hot-toast": "^2.5.2",
     "react-router-dom": "^7.3.0",
     "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1"
+    "react-spinners": "^0.15.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -32,6 +37,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "sitemap": "^8.0.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"

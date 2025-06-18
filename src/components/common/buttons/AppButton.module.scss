@@ -10,7 +10,10 @@
   font-family: "Mont";
   cursor: pointer;
   @include hover-lift;
-  transition: background-color 0.3s, transform 0.3s;
+
+  & {
+    transition: background-color 0.3s, transform 0.3s;
+  }
 
   &:hover {
     background-color: rgba(167, 141, 111, 0.1);

@@ -1,5 +1,6 @@
 import { untranslated } from "../common/infrastructure/utilities/untranslsated";
 import { PageTitle } from "../common/PageTitle";
+import { Seo } from "../common/Seo";
 import styles from "./Careers.module.scss";
 import { Badge } from "./components/Badge";
 import { InfoCard } from "./components/InfoCard";
@@ -14,6 +15,13 @@ export const Careers = () => {
   ];
   return (
     <div className={styles.careers_wrapper}>
+      <Seo
+        title={"Кариери"}
+        description={
+          "Искаш да станеш част от екипа на Studio Reform? Виж свободните позиции и кандидатствай още сега!"
+        }
+      />
+
       <PageTitle text={untranslated("Станете част от нашия екип")} />
 
       <div className={styles.careers}>
