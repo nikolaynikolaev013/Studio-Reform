@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./StudioProfile.module.scss";
 import { Icon, IconType } from "../../common/icons/Icon";
 import { MapCard } from "../../common/MapCard";
@@ -32,8 +32,6 @@ export const StudioProfile = ({
   studio,
   imageClassName,
 }: IStudioProfileProps) => {
-  const navigate = useNavigate();
-
   return (
     <div className={styles.studio}>
       <Seo title={"Нашите студиа"} description={studio.metaDescription} />
