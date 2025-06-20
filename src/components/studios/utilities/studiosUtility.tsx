@@ -15,6 +15,7 @@ export const studioSofiaCenter: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/76sjF14ttUPuk6CY6",
   lat: 42.7011482,
   lng: 23.3214208,
+  link: "https://reservation.studio/bg/location/studio-reform-pilates/classes",
   metaDescription:
     "Реформър пилатес студио в центъра на София – модерно оборудване, уютна обстановка и сертифицирани треньори.",
 };
@@ -55,5 +56,6 @@ export const studioVarnaCenter: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/b9BuCJ5NQX6Ge5NP6",
   lat: 43.2029828,
   lng: 27.9033711,
-  metaDescription: "Studio Reform Варна Център – първокласно пилатес студио с фокус върху индивидуалния подход и професионалната грижа.",
+  metaDescription:
+    "Studio Reform Варна Център – първокласно пилатес студио с фокус върху индивидуалния подход и професионалната грижа.",
 };

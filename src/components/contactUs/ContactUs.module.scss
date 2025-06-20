@@ -42,6 +42,10 @@
       justify-content: flex-start;
       gap: 20px;
 
+      @include tablet {
+        justify-content: center;
+      }
+
       a:last-child {
         margin-left: 7px;
       }

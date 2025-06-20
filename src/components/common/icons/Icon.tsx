@@ -14,6 +14,7 @@ import { LocationIcon } from "./baseIcons/LocationIcon";
 import { BulgariaFlagIcon } from "./baseIcons/BulgariaFlagIcon";
 import { UKFlagIcon } from "./baseIcons/UKFlagIcon";
 import { BurgerMenuIcon } from "./baseIcons/BurgerMenuIcon";
+import { TikTokIcon } from "./baseIcons/TikTokIcon";
 
 export enum IconType {
   ReformPilatesLogo = "ReformPilatesLogo",
@@ -29,6 +30,7 @@ export enum IconType {
   BulgariaFlag = "BulgariaFlag",
   UkFlag = "UkFlag",
   BurgerMenu = "BurgerMenu",
+  TikTok = "TikTok",
 }
 
 export interface IBaseIconProps {
@@ -66,6 +68,7 @@ IIconProps) => {
     [IconType.BulgariaFlag]: <BulgariaFlagIcon />,
     [IconType.UkFlag]: <UKFlagIcon />,
     [IconType.BurgerMenu]: <BurgerMenuIcon />,
+    [IconType.TikTok]: <TikTokIcon />,
   };
 
   return (

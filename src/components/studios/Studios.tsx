@@ -11,6 +11,7 @@ import {
   studioVarnaLevski,
 } from "./utilities/studiosUtility";
 import { constructStudioHref } from "../common/infrastructure/routes/routePaths";
+import { useMemo } from "react";
 
 export const Studios = () => {
   const tabs: ITabData<StudiosType>[] = [
@@ -54,17 +55,21 @@ export const Studios = () => {
 
   const { studio } = useParams();
 
+  const defaultSelectedValue = useMemo(
+    () =>
+      (studio as StudiosType) && studio !== ":studio"
+        ? (studio as StudiosType)
+        : "sofia-center",
+    []
+  );
+
   return (
     <div className={styles.studios}>
       <PageTitle text={untranslated("Нашите студиа")} />
 
       <Tabs
         tabs={tabs}
-        defaultSelectedValue={
-          (studio as StudiosType) && studio !== ":studio"
-            ? (studio as StudiosType)
-            : "sofia-center"
-        }
+        defaultSelectedValue={defaultSelectedValue}
         buttonWidth={165}
         onTabChange={onTabChange}
       />

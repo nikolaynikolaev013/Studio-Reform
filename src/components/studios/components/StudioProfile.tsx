@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./StudioProfile.module.scss";
 import { Icon, IconType } from "../../common/icons/Icon";
 import { MapCard } from "../../common/MapCard";
 import { Seo } from "../../common/Seo";
 import { classNames } from "primereact/utils";
+import { AppButton } from "../../common/buttons/AppButton";
 
 export interface IStudioViewModel {
   studioName: string;
@@ -14,6 +15,7 @@ export interface IStudioViewModel {
   metaDescription: string;
   lat: number;
   lng: number;
+  link?: string;
 }
 
 interface IStudioPhoneViewModel {
@@ -30,6 +32,8 @@ export const StudioProfile = ({
   studio,
   imageClassName,
 }: IStudioProfileProps) => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.studio}>
       <Seo title={"Нашите студиа"} description={studio.metaDescription} />
@@ -65,6 +69,15 @@ export const StudioProfile = ({
             >
               <Icon type={IconType.Map} width={"20px"} /> Отвори в Google Maps
             </Link>
+            {!!studio.link && (
+              <AppButton
+                className={styles.studio_left_links_button}
+                text={"Запази час онлайн"}
+                onClick={() =>
+                  window.open(studio.link, "_blank", "noopener,noreferrer")
+                }
+              />
+            )}
           </div>
         </div>
         <div className={classNames(styles.studio_image, imageClassName)}></div>
