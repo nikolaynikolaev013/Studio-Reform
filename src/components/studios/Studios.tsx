@@ -9,6 +9,7 @@ import {
   StudiosType,
   studioVarnaCenter,
   studioVarnaLevski,
+  studioVarnaTroshevo,
 } from "./utilities/studiosUtility";
 import { constructStudioHref } from "../common/infrastructure/routes/routePaths";
 import { useMemo } from "react";
@@ -32,6 +33,16 @@ export const Studios = () => {
         <StudioProfile
           studio={studioVarnaCenter}
           imageClassName={styles.varna_center}
+        />
+      ),
+    },
+    {
+      label: "Варна - Трошево",
+      key: "varna-troshevo",
+      children: (
+        <StudioProfile
+          studio={studioVarnaTroshevo}
+          imageClassName={styles.varna_troshevo}
         />
       ),
     },
@@ -70,7 +81,7 @@ export const Studios = () => {
       <Tabs
         tabs={tabs}
         defaultSelectedValue={defaultSelectedValue}
-        buttonWidth={165}
+        buttonWidth={"auto"}
         onTabChange={onTabChange}
       />
     </div>

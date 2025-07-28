@@ -11,7 +11,7 @@ export interface ITabData<T extends string> {
 interface ITabsProps<T extends string> {
   tabs: ITabData<T>[];
   defaultSelectedValue: T;
-  buttonWidth?: number;
+  buttonWidth?: number | string;
   onTabChange?: (selectedValue: T) => void;
 }
 

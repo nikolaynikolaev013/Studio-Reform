@@ -107,9 +107,7 @@ export const Layout = ({ className, children }: ILayoutProps) => {
               <Icon width={"3rem"} height={"3rem"} type={IconType.Instagram} />
             </Link>
             <Link
-              to={
-                "https://www.tiktok.com/@studioreformpilates?_t=ZN-8wg670EUoAo&_r=1"
-              }
+              to={"https://www.tiktok.com/@studioreformpilates"}
               area-label="Go to our TikTok"
             >
               <Icon width={"3rem"} height={"3rem"} type={IconType.TikTok} />

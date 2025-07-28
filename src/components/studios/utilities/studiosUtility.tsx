@@ -1,6 +1,10 @@
 import { IStudioViewModel } from "../components/StudioProfile";
 
-export type StudiosType = "varna-center" | "varna-levski" | "sofia-center";
+export type StudiosType =
+  | "varna-center"
+  | "varna-levski"
+  | "sofia-center"
+  | "varna-troshevo";
 
 export const studioSofiaCenter: IStudioViewModel = {
   studioName: "София - център",
@@ -58,4 +62,22 @@ export const studioVarnaCenter: IStudioViewModel = {
   lng: 27.9033711,
   metaDescription:
     "Studio Reform Варна Център – първокласно пилатес студио с фокус върху индивидуалния подход и професионалната грижа.",
+};
+
+export const studioVarnaTroshevo: IStudioViewModel = {
+  studioName: "Варна - Трошево",
+  workingHours: "Пон-Пет; 8:00-20:00; Съб: 9:00-18:00",
+  phoneNumbers: [
+    {
+      phone: "+359 889 953 740",
+      phoneLink: "tel:00359889953740",
+    },
+  ],
+  address: "Варна, ул.'Младежка' 141, ет.2, Варна",
+  // TODO: Add the correct link
+  googleMapsLink: "https://maps.app.goo.gl/9eW69VpRbY3RQScBA",
+  lat: 43.226035,
+  lng: 27.87923,
+  metaDescription:
+    "Studio Reform Варна Трошево – пилатес студио от висок клас, със силен акцент върху персонализирания подход и професионалното внимание към клиента.",
 };

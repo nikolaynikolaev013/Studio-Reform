@@ -138,9 +138,7 @@ export const ContactUs = () => {
                   />
                 </Link>
                 <Link
-                  to={
-                    "https://www.tiktok.com/@studioreformpilates?_t=ZN-8wg670EUoAo&_r=1"
-                  }
+                  to={"https://www.tiktok.com/@studioreformpilates"}
                   area-label="TikTok"
                 >
                   <Icon width={"3rem"} height={"3rem"} type={IconType.TikTok} />
