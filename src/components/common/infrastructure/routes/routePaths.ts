@@ -12,5 +12,5 @@ export const routePaths = {
 };
 
 export const constructStudioHref = (studio: StudiosType) => {
-  return routePaths.studios.replace(":studio", studio);
+  return routePaths.studios.replace(":studio?", studio);
 };
