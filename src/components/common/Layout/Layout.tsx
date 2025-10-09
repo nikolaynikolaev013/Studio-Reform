@@ -52,7 +52,7 @@ export const Layout = ({ className, children }: ILayoutProps) => {
                       to={constructStudioHref("sofia-center")}
                       area-label="See more about Sofia Center Studio"
                     >
-                      📍 Студио <span>София Център</span>
+                      📍 <span>София Център</span>
                     </Link>
                   </li>
                   <li>
@@ -60,7 +60,15 @@ export const Layout = ({ className, children }: ILayoutProps) => {
                       to={constructStudioHref("varna-center")}
                       area-label="See more about Varna Center Studio"
                     >
-                      📍 Студио <span>Варна Център</span>
+                      📍 <span>Варна Център</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={constructStudioHref("varna-troshevo")}
+                      area-label="See more about Varna Troshevo Studio"
+                    >
+                      📍 <span>Варна Трошево</span>
                     </Link>
                   </li>
                   <li>
@@ -68,7 +76,7 @@ export const Layout = ({ className, children }: ILayoutProps) => {
                       to={constructStudioHref("varna-levski")}
                       area-label="See more about Varna Levski Studio"
                     >
-                      📍 Студио <span>Варна Левски</span>
+                      📍 <span>Варна Левски</span>
                     </Link>
                   </li>
                 </ul>

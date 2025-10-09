@@ -80,6 +80,15 @@ export const Navigation = ({ className }: INavigationProps) => {
               </li>
               <li>
                 <Link
+                  to={constructStudioHref("varna-troshevo")}
+                  onClick={() => setIsSideMenuOpen(false)}
+                  area-label="See more about Varna Troshevo Studio"
+                >
+                  📍 Студио <span>Варна Трошево</span>
+                </Link>
+              </li>
+              <li>
+                <Link
                   to={constructStudioHref("varna-levski")}
                   onClick={() => setIsSideMenuOpen(false)}
                   area-label="See more about Varna Levski Studio"
