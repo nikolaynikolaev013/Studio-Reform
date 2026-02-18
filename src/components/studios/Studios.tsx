@@ -9,6 +9,7 @@ import {
   StudiosType,
   studioVarnaCenter,
   studioVarnaLevski,
+  studioVarnaPlanetarium,
   studioVarnaTroshevo,
 } from "./utilities/studiosUtility";
 import { constructStudioHref } from "../common/infrastructure/routes/routePaths";
@@ -33,6 +34,16 @@ export const Studios = () => {
         <StudioProfile
           studio={studioVarnaCenter}
           imageClassName={styles.varna_center}
+        />
+      ),
+    },
+    {
+      label: "Варна - БМКЦ",
+      key: "varna-BMKC",
+      children: (
+        <StudioProfile
+          studio={studioVarnaPlanetarium}
+          imageClassName={styles.varna_troshevo}
         />
       ),
     },
@@ -71,7 +82,7 @@ export const Studios = () => {
       (studio as StudiosType) && studio !== ":studio"
         ? (studio as StudiosType)
         : "sofia-center",
-    []
+    [],
   );
 
   return (

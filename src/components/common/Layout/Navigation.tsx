@@ -71,6 +71,15 @@ export const Navigation = ({ className }: INavigationProps) => {
               </li>
               <li>
                 <Link
+                  to={constructStudioHref("varna-BMKC")}
+                  onClick={() => setIsSideMenuOpen(false)}
+                  area-label="See more about Sofia BMKC Studio"
+                >
+                  📍 Студио <span>Варна БМКЦ</span>
+                </Link>
+              </li>
+              <li>
+                <Link
                   to={constructStudioHref("varna-center")}
                   onClick={() => setIsSideMenuOpen(false)}
                   area-label="See more about Varna Center Studio"
@@ -123,7 +132,7 @@ const NavigationItem = ({ item, onClick }: INavigationItemProps) => {
   const navigate = useNavigate();
 
   const currentRoute = navigationLinks.find(
-    (x) => x.href && matchPath(x.href, location.pathname)
+    (x) => x.href && matchPath(x.href, location.pathname),
   );
 
   const isActive = item?.href === currentRoute?.href;

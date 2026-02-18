@@ -57,6 +57,14 @@ export const Layout = ({ className, children }: ILayoutProps) => {
                   </li>
                   <li>
                     <Link
+                      to={constructStudioHref("varna-BMKC")}
+                      area-label="See more about Varna BMKC Studio"
+                    >
+                      📍 <span>Варна БМКЦ</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       to={constructStudioHref("varna-center")}
                       area-label="See more about Varna Center Studio"
                     >

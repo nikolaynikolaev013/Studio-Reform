@@ -24,7 +24,7 @@ export const PricesTable = ({ studioPrices }: IPricesTableProps) => {
             <div key={p.key} className={styles.prices_table_row}>
               <div className={styles.prices_table_key}>{p.key}</div>
               <div className={styles.prices_table_value}>
-                {p.value} лв. / {(Number(p.value) / 1.95583).toFixed(2)} €
+                {p.value} € / {(Number(p.value) * 1.95583).toFixed(2)} лв.
               </div>
             </div>
           ))}
