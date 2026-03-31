@@ -88,7 +88,7 @@ export const ContactUs = () => {
 
             <div className={styles.contactUs_left_links}>
               <Link
-                to={"tel:+359 88 9953740"}
+                to={"tel:+359889953740"}
                 className={styles.contactUs_left_links_link}
                 area-label="Call us"
               >

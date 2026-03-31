@@ -20,7 +20,7 @@ export const studioSofiaCenter: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/76sjF14ttUPuk6CY6",
   lat: 42.7011482,
   lng: 23.3214208,
-  link: "https://reservation.studio/bg/location/studio-reform-pilates/classes",
+  link: "https://sofia.studioreform.bg/appointment?selectedStudio=23",
   metaDescription:
     "Реформър пилатес студио в центъра на София – модерно оборудване, уютна обстановка и сертифицирани треньори.",
 };
@@ -39,7 +39,7 @@ export const studioVarnaLevski: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/whkdPmhyXQ2G5u5N6",
   lat: 43.2205151,
   lng: 27.9334835,
-  link: "https://portal.studioreform.bg/appointment?selectedStudio=4",
+  link: "https://varna.studioreform.bg/appointment?selectedStudio=4",
   metaDescription:
     "Пилатес студио Studio Reform в квартал Левски, Варна. Тренировки, съобразени с твоето ниво и цели. Запиши се още днес!",
 };
@@ -76,7 +76,7 @@ export const studioVarnaTroshevo: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/xGT34GZkxszwuc6H9",
   lat: 43.226035,
   lng: 27.87923,
-  link: "https://portal.studioreform.bg/appointment?selectedStudio=16",
+  link: "https://varna.studioreform.bg/appointment?selectedStudio=16",
   metaDescription:
     "Studio Reform Варна Трошево – пилатес студио от висок клас, със силен акцент върху персонализирания подход и професионалното внимание към клиента.",
 };
@@ -90,12 +90,13 @@ export const studioVarnaPlanetarium: IStudioViewModel = {
       phoneLink: "tel:00359889953740",
     },
   ],
-  address: "ул.'Васил Друмев' 31 (входът е от към Планетариума), Варна",
+  address:
+    "Български Морски Квалификационен Център (вход от към Планетариума), Варна",
   // TODO: Add the correct link
   googleMapsLink: "https://maps.app.goo.gl/L4bJxfsxctFQM1n29",
   lat: 43.2118312,
   lng: 27.9311762,
-  link: "https://portal.studioreform.bg/appointment?selectedStudio=21",
+  link: "https://varna.studioreform.bg/appointment?selectedStudio=21",
   metaDescription:
     "Studio Reform Варна БКМЦ – реформър пилатес студио до Планетариума с индивидуален подход и сертифицирани инструктори.",
 };
