@@ -92,7 +92,7 @@ describe("studioVarnaCenter", () => {
     expect(studioVarnaCenter.lat).toBe(43.2029828);
     expect(studioVarnaCenter.lng).toBe(27.9033711);
     expect(studioVarnaCenter.link).toBe(
-      "https://varna.studioreform.bg/appointment?selectedStudio=22"
+      "https://varna.studioreform.bg/appointment?selectedStudio=27"
     );
   });
 
