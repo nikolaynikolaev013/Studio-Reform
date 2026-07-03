@@ -58,6 +58,7 @@ export const studioVarnaCenter: IStudioViewModel = {
   googleMapsLink: "https://maps.app.goo.gl/b9BuCJ5NQX6Ge5NP6",
   lat: 43.2029828,
   lng: 27.9033711,
+  link: "https://varna.studioreform.bg/appointment?selectedStudio=27",
   metaDescription:
     "Studio Reform Варна Център – първокласно пилатес студио с фокус върху индивидуалния подход и професионалната грижа.",
 };
