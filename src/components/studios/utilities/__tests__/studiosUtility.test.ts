@@ -87,10 +87,10 @@ describe("studioVarnaCenter", () => {
       "ул. 'Александър Дякович' 45В, етаж 2, Варна"
     );
     expect(studioVarnaCenter.googleMapsLink).toBe(
-      "https://maps.app.goo.gl/b9BuCJ5NQX6Ge5NP6"
+      "https://www.google.com/maps/place/43.2027434,27.9061867"
     );
-    expect(studioVarnaCenter.lat).toBe(43.2029828);
-    expect(studioVarnaCenter.lng).toBe(27.9033711);
+    expect(studioVarnaCenter.lat).toBe(43.2027434);
+    expect(studioVarnaCenter.lng).toBe(27.9061867);
     expect(studioVarnaCenter.link).toBe(
       "https://varna.studioreform.bg/appointment?selectedStudio=27"
     );

@@ -54,10 +54,9 @@ export const studioVarnaCenter: IStudioViewModel = {
     },
   ],
   address: "ул. 'Александър Дякович' 45В, етаж 2, Варна",
-  // TODO: Add the correct link
-  googleMapsLink: "https://maps.app.goo.gl/b9BuCJ5NQX6Ge5NP6",
-  lat: 43.2029828,
-  lng: 27.9033711,
+  googleMapsLink: "https://www.google.com/maps/place/43.2027434,27.9061867",
+  lat: 43.2027434,
+  lng: 27.9061867,
   link: "https://varna.studioreform.bg/appointment?selectedStudio=27",
   metaDescription:
     "Studio Reform Варна Център – първокласно пилатес студио с фокус върху индивидуалния подход и професионалната грижа.",
